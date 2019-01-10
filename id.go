@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// NewID returns an ID of form adjetive + adjetive noun
+// NewID returns an ID of form adjetive + animal noun
 func NewID() string {
 	rand.Seed(time.Now().Unix())
 
