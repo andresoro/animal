@@ -5303,6 +5303,9 @@ var Adjetive1 = []string{
 	"Nonreligious",
 	"Nonritualistic",
 	"Nonromantic",
+}
+
+var Adjetive2 = []string{
 	"Nonround",
 	"Nonroyal",
 	"Nonscholarly",

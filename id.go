@@ -6,12 +6,20 @@ import (
 	"time"
 )
 
-// NewID returns an ID of form adjetive + animal noun
-func NewID() string {
+func init() {
 	rand.Seed(time.Now().Unix())
+}
 
-	animal := Animals[rand.Intn(len(Animals))]
-	adj := Adjetive1[rand.Intn(len(Adjetive1))]
+// NewID returns an ID of form adjetive + animal noun
+func New() string {
 
-	return strings.ToLower(animal + adj)
+	animal := capitalize(Animals[rand.Intn(len(Animals))])
+	adj := capitalize(Adjetive1[rand.Intn(len(Adjetive1))])
+	adj2 := capitalize(Adjetive2[rand.Intn(len(Adjetive2))])
+
+	return (adj + adj2 + animal)
+}
+
+func capitalize(s string) string {
+	return strings.Title(strings.ToLower(s))
 }
